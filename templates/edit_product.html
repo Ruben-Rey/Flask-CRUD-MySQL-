@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/update_product/{{ producto.0 }}", method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Producto</label>
+      <input type="text" name="producto" class="form-control" value="{{ producto.1 }}">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Descripcion</label>
+      <input type="text" name="descripcion" class="form-control" value="{{ producto.2 }}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Marca</label>
+        <input type="text" name="marca" class="form-control" value="{{ producto.3 }}">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Precio</label>
+        <input type="text" name="precio" class="form-control" value="{{ producto.4 }}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Stock</label>
+        <input type="text" name="stock" class="form-control" value="{{ producto.5 }}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+
+
+{% endblock %}
